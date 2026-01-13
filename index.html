@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,38 +45,51 @@
             cursor: pointer;
             transition: all 0.3s;
             border-radius: 25px;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
         }
 
-
-        .clickable-area:hover {
+        .clickable-area:hover,
+        .clickable-area:active {
             background: rgba(1, 73, 165, 0.3);
         }
 
+        /* Convert pixel positions to percentages for responsive design */
         .buy-now-link {
-            left: 161px;
-            top: 555px;
-            width: 270px;
-            height: 70px;
+            left: 11.5%;
+            top: 70.6%;
+            width: 19.3%;
+            height: 8.9%;
         }
 
-	.sign-up-link {
-            left: 565px;
-            top: 555px;
-            width: 270px;
-            height: 70px;
+        .sign-up-link {
+            left: 40.4%;
+            top: 70.6%;
+            width: 19.3%;
+            height: 8.9%;
         }
 
-	.register-link {
-            left: 965px;
-            top: 555px;
-            width: 270px;
-            height: 70px;
+        .register-link {
+            left: 69%;
+            top: 70.6%;
+            width: 19.3%;
+            height: 8.9%;
         }
-
 
         @media (max-width: 1200px) {
             .flyer {
                 max-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .clickable-area {
+                /* Slightly larger touch targets on mobile */
+                min-height: 44px;
             }
         }
     </style>
@@ -83,8 +97,8 @@
 <body>
     <div class="flyer">
         <a href="https://www.triveni-mandal.org/event-details/makar-sankrant-celebration-2026" target="_blank" class="clickable-area buy-now-link"></a>
-	<a href="https://www.triveni-mandal.org/makar-sankrant-2026-volunteer" target="_blank" class="clickable-area sign-up-link"></a>
-	<a href="https://www.wixforms.com/f/7414852782353548288" target="_blank" class="clickable-area register-link"></a>
+        <a href="https://www.triveni-mandal.org/makar-sankrant-2026-volunteer" target="_blank" class="clickable-area sign-up-link"></a>
+        <a href="https://www.wixforms.com/f/7414852782353548288" target="_blank" class="clickable-area register-link"></a>
     </div>
 </body>
 </html>
